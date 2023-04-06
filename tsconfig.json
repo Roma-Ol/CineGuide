@@ -1,0 +1,28 @@
+{
+  "extends": "./configs/tsconfig-base.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "es6",
+    "outDir": "./build",
+    "jsx": "react-jsx",
+    "resolveJsonModule": true,
+    "module": "es2022",
+    "rootDir": "src",
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@style/*": ["src/style/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@customTypes/*": ["src/types/*"]
+    }
+  },
+  "include": ["./src/**/*"],
+  "exclude": [
+    "build/**",
+    "jest.config.ts",
+    "jest.setup.js",
+    "src/setupTests.ts",
+    "node_modules"
+  ]
+}
