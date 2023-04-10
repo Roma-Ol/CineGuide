@@ -1,0 +1,16 @@
+@use "./abstract/_variables.scss" as variables;
+
+.user-interaction {
+  padding: 60px 40px;
+  border-radius: 5px;
+  transition: .2s;
+  position: relative;
+  width: 100%;
+  height: max-content;
+  transform: translateY(-50%);
+  top: 50%;
+
+  &.with-suggestions {
+    transform: translateY(-150%);
+  }
+}

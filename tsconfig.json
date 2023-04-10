@@ -17,7 +17,7 @@
       "@customTypes/*": ["src/types/*"]
     }
   },
-  "include": ["./src/**/*"],
+  "include": ["src/**/*", "types/**/*"],
   "exclude": [
     "build/**",
     "jest.config.ts",

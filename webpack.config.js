@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-    entry: './index.js',
+    entry: './src/index.js',
     mode: 'development',
     output: {
         path: path.resolve(__dirname, './build'),
@@ -30,11 +30,33 @@ module.exports = {
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
-
+            {
+                test: /\.module\.css$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader',
+                ],
+            },
         ],
     },
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+        alias: {
+            '@components': path.resolve(__dirname, 'src/components/'),
+        },
     },
     plugins: [
         new HtmlWebpackPlugin({
