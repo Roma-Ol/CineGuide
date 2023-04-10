@@ -35,12 +35,9 @@ const App: React.FC = () => {
 		});
 	}, [searchText]);
 
-
 	const getMovies = async () => {
 		return await getMovieByName(searchText);
 	};
-
-	console.log(selectedMovie);
 
 	return (
 		<main id='main' className='main container'>

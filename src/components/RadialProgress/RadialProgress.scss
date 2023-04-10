@@ -18,7 +18,7 @@
   .shadow {
     height: 100%;
     width: 100%;
-    border: 5px solid variables.$pink;
+    border: 5px solid variables.$grey-dark;
     border-radius: 50%;
   }
 
@@ -45,7 +45,7 @@
   .half-circle {
     height: 100%;
     width: 100%;
-    border: 5px solid variables.$coral;
+    border: 5px solid variables.$pink;
     border-radius: 50%;
     clip: rect(0, 65px, 130px, 0);
     left: 0;
